@@ -5,6 +5,6 @@ package logistics;
  * Khai báo hành vi chung cho tất cả các loại phương tiện vận tải.
  */
 public interface Transport {
-    void deliver();
+    String deliver();
 }
 

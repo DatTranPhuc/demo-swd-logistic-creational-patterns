@@ -6,8 +6,10 @@ package logistics;
  */
 public class Ship implements Transport {
     @Override
-    public void deliver() {
+    public String deliver() {
+        String msg = "🚢 <b>[Ship]:</b> Đã xếp container! Hàng được chuyển qua đường biển quốc tế.";
         System.out.println("  🚢 [Ship] Vận chuyển hàng hóa bằng đường biển trong các container tiêu chuẩn quốc tế.");
+        return msg;
     }
 }
 

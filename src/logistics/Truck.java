@@ -6,8 +6,10 @@ package logistics;
  */
 public class Truck implements Transport {
     @Override
-    public void deliver() {
+    public String deliver() {
+        String msg = "🚚 <b>[Truck]:</b> Đã xuất kho! Hàng được vận chuyển bằng đường bộ trong thùng xe tải trọng tải lớn.";
         System.out.println("  🚚 [Truck] Vận chuyển hàng hóa bằng đường bộ trong thùng xe có tải trọng lớn.");
+        return msg;
     }
 }
 

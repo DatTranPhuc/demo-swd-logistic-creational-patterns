@@ -413,17 +413,9 @@ public class WebDemo {
                 default     -> new RoadLogistics();
             };
 
-            // 2. Kích hoạt Factory Method để lấy Product
+            // 2. Kích hoạt Factory Method & thực thi nghiệp vụ đa hình (không cần instanceof)
             Transport transport = logistics.createTransport();
-
-            String deliveryMsg = "";
-            if (transport instanceof Truck) {
-                deliveryMsg = "🚚 <b>[Truck]:</b> Đã xuất kho! Hàng được vận chuyển bằng đường bộ trong thùng xe tải trọng tải lớn.";
-            } else if (transport instanceof Ship) {
-                deliveryMsg = "🚢 <b>[Ship]:</b> Đã xếp container! Hàng được chuyển qua đường biển quốc tế.";
-            } else if (transport instanceof Plane) {
-                deliveryMsg = "✈️ <b>[Plane]:</b> Đã cất cánh! Hàng được giao hỏa tốc xuyên quốc gia qua đường hàng không.";
-            }
+            String deliveryMsg = logistics.planDelivery(shipmentId);
 
             String timeStr = LocalTime.now().format(DateTimeFormatter.ofPattern("HH:mm:ss"));
 

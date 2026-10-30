@@ -7,8 +7,10 @@ package logistics;
  */
 public class Plane implements Transport {
     @Override
-    public void deliver() {
+    public String deliver() {
+        String msg = "✈️ <b>[Plane]:</b> Đã cất cánh! Hàng được giao hỏa tốc xuyên quốc gia qua đường hàng không.";
         System.out.println("  ✈️ [Plane] Vận chuyển hàng hóa hỏa tốc xuyên quốc gia bằng đường hàng không.");
+        return msg;
     }
 }
 
