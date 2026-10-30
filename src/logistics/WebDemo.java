@@ -37,11 +37,11 @@ public class WebDemo {
         server.start();
 
         String url = "http://localhost:" + PORT;
-        System.out.println("==================================================================");
+
         System.out.println("   🚀 LOCAL WEB SERVER ĐANG CHẠY TẠI: " + url);
-        System.out.println("   Đang tự động mở trình duyệt web của bạn...");
+        
         System.out.println("   (Nếu trình duyệt không tự mở, hãy click vào link: " + url + " )");
-        System.out.println("==================================================================");
+
 
         // Tự động mở trình duyệt mặc định của máy tính
         try {
@@ -262,23 +262,6 @@ public class WebDemo {
             from { opacity: 0; transform: translateY(6px); }
             to { opacity: 1; transform: translateY(0); }
         }
-        .diagram-section {
-            margin-top: 24px;
-            background: var(--card);
-            border: 1px solid var(--card-border);
-            border-radius: 16px;
-            padding: 20px 24px;
-        }
-        .diagram-content {
-            background: #090d16;
-            padding: 16px;
-            border-radius: 10px;
-            font-family: 'JetBrains Mono', monospace;
-            font-size: 12px;
-            color: #94a3b8;
-            overflow-x: auto;
-            white-space: pre;
-        }
     </style>
 </head>
 <body>
@@ -347,25 +330,6 @@ public class WebDemo {
                     </div>
                 </div>
             </div>
-        </div>
-
-        <!-- Sơ đồ tóm tắt kiến trúc bên dưới -->
-        <div class="diagram-section">
-            <div class="card-title">
-                <span>📐 Kiến trúc Factory Method đang hoạt động trong Demo:</span>
-            </div>
-            <div class="diagram-content">
-[Web Client UI] ──(gọi)──> [Logistics] (Creator Abstract)
-                               │
-               ┌───────────────┼───────────────┐
-               ▼               ▼               ▼
-        [RoadLogistics]  [SeaLogistics]  [AirLogistics]  (Concrete Creators)
-               │ (creates)     │ (creates)     │ (creates)
-               ▼               ▼               ▼
-            [Truck]         [Ship]          [Plane]      (Concrete Products)
-               └───────────────┼───────────────┘
-                               ▼ (implements)
-                          [Transport]                    (Product Interface)</div>
         </div>
     </div>
 
