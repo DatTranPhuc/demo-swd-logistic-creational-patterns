@@ -1,0 +1,124 @@
+<mxfile host="app.diagrams.net">
+  <diagram name="Factory Method - Logistics" id="factory-method-logistics">
+    <mxGraphModel dx="1200" dy="800" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="827" background="#18181b" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+
+        <!-- CREATOR (ABSTRACT): Logistics -->
+        <mxCell id="logistics" value="&lt;&lt;abstract&gt;&gt;&#xa;Logistics" style="swimlane;fontStyle=3;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=44;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;fillColor=#1e293b;strokeColor=#38bdf8;fontColor=#f8fafc;rounded=1;arcSize=6;" vertex="1" parent="1">
+          <mxGeometry x="140" y="120" width="260" height="104" as="geometry" />
+        </mxCell>
+        <mxCell id="logistics_line" value="" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;strokeColor=#38bdf8;" vertex="1" parent="logistics">
+          <mxGeometry y="44" width="260" height="8" as="geometry" />
+        </mxCell>
+        <mxCell id="logistics_methods" value="+ createTransport() : Transport&#xa;+ planDelivery(shipmentId: String) : void" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=8;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontColor=#e2e8f0;fontFamily=Consolas;fontSize=12;" vertex="1" parent="logistics">
+          <mxGeometry y="52" width="260" height="52" as="geometry" />
+        </mxCell>
+
+        <!-- CONCRETE CREATOR 1: RoadLogistics -->
+        <mxCell id="road_logistics" value="RoadLogistics" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;fillColor=#1e293b;strokeColor=#60a5fa;fontColor=#f8fafc;rounded=1;arcSize=6;" vertex="1" parent="1">
+          <mxGeometry x="20" y="340" width="210" height="72" as="geometry" />
+        </mxCell>
+        <mxCell id="road_line" value="" style="line;strokeWidth=1;fillColor=none;strokeColor=#60a5fa;" vertex="1" parent="road_logistics">
+          <mxGeometry y="30" width="210" height="8" as="geometry" />
+        </mxCell>
+        <mxCell id="road_methods" value="+ createTransport() : Transport" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=8;fontColor=#e2e8f0;fontFamily=Consolas;fontSize=12;" vertex="1" parent="road_logistics">
+          <mxGeometry y="38" width="210" height="34" as="geometry" />
+        </mxCell>
+
+        <!-- CONCRETE CREATOR 2: SeaLogistics -->
+        <mxCell id="sea_logistics" value="SeaLogistics" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;fillColor=#1e293b;strokeColor=#60a5fa;fontColor=#f8fafc;rounded=1;arcSize=6;" vertex="1" parent="1">
+          <mxGeometry x="250" y="340" width="210" height="72" as="geometry" />
+        </mxCell>
+        <mxCell id="sea_line" value="" style="line;strokeWidth=1;fillColor=none;strokeColor=#60a5fa;" vertex="1" parent="sea_logistics">
+          <mxGeometry y="30" width="210" height="8" as="geometry" />
+        </mxCell>
+        <mxCell id="sea_methods" value="+ createTransport() : Transport" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=8;fontColor=#e2e8f0;fontFamily=Consolas;fontSize=12;" vertex="1" parent="sea_logistics">
+          <mxGeometry y="38" width="210" height="34" as="geometry" />
+        </mxCell>
+
+        <!-- CONCRETE CREATOR 3: AirLogistics -->
+        <mxCell id="air_logistics" value="AirLogistics" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;fillColor=#1e293b;strokeColor=#60a5fa;fontColor=#f8fafc;rounded=1;arcSize=6;" vertex="1" parent="1">
+          <mxGeometry x="135" y="460" width="210" height="72" as="geometry" />
+        </mxCell>
+        <mxCell id="air_line" value="" style="line;strokeWidth=1;fillColor=none;strokeColor=#60a5fa;" vertex="1" parent="air_logistics">
+          <mxGeometry y="30" width="210" height="8" as="geometry" />
+        </mxCell>
+        <mxCell id="air_methods" value="+ createTransport() : Transport" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=8;fontColor=#e2e8f0;fontFamily=Consolas;fontSize=12;" vertex="1" parent="air_logistics">
+          <mxGeometry y="38" width="210" height="34" as="geometry" />
+        </mxCell>
+
+        <!-- PRODUCT (INTERFACE): Transport -->
+        <mxCell id="transport" value="&lt;&lt;interface&gt;&gt;&#xa;Transport" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=44;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;fillColor=#1e293b;strokeColor=#34d399;fontColor=#f8fafc;rounded=1;arcSize=6;" vertex="1" parent="1">
+          <mxGeometry x="680" y="128" width="220" height="88" as="geometry" />
+        </mxCell>
+        <mxCell id="transport_line" value="" style="line;strokeWidth=1;fillColor=none;strokeColor=#34d399;" vertex="1" parent="transport">
+          <mxGeometry y="44" width="220" height="8" as="geometry" />
+        </mxCell>
+        <mxCell id="transport_methods" value="+ deliver() : void" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=8;fontColor=#e2e8f0;fontFamily=Consolas;fontSize=12;" vertex="1" parent="transport">
+          <mxGeometry y="52" width="220" height="36" as="geometry" />
+        </mxCell>
+
+        <!-- CONCRETE PRODUCT 1: Truck -->
+        <mxCell id="truck" value="Truck" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;fillColor=#1e293b;strokeColor=#10b981;fontColor=#f8fafc;rounded=1;arcSize=6;" vertex="1" parent="1">
+          <mxGeometry x="580" y="340" width="170" height="72" as="geometry" />
+        </mxCell>
+        <mxCell id="truck_line" value="" style="line;strokeWidth=1;fillColor=none;strokeColor=#10b981;" vertex="1" parent="truck">
+          <mxGeometry y="30" width="170" height="8" as="geometry" />
+        </mxCell>
+        <mxCell id="truck_methods" value="+ deliver() : void" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=8;fontColor=#e2e8f0;fontFamily=Consolas;fontSize=12;" vertex="1" parent="truck">
+          <mxGeometry y="38" width="170" height="34" as="geometry" />
+        </mxCell>
+
+        <!-- CONCRETE PRODUCT 2: Ship -->
+        <mxCell id="ship" value="Ship" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;fillColor=#1e293b;strokeColor=#10b981;fontColor=#f8fafc;rounded=1;arcSize=6;" vertex="1" parent="1">
+          <mxGeometry x="830" y="340" width="170" height="72" as="geometry" />
+        </mxCell>
+        <mxCell id="ship_line" value="" style="line;strokeWidth=1;fillColor=none;strokeColor=#10b981;" vertex="1" parent="ship">
+          <mxGeometry y="30" width="170" height="8" as="geometry" />
+        </mxCell>
+        <mxCell id="ship_methods" value="+ deliver() : void" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=8;fontColor=#e2e8f0;fontFamily=Consolas;fontSize=12;" vertex="1" parent="ship">
+          <mxGeometry y="38" width="170" height="34" as="geometry" />
+        </mxCell>
+
+        <!-- CONCRETE PRODUCT 3: Plane -->
+        <mxCell id="plane" value="Plane" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;fillColor=#1e293b;strokeColor=#10b981;fontColor=#f8fafc;rounded=1;arcSize=6;" vertex="1" parent="1">
+          <mxGeometry x="705" y="460" width="170" height="72" as="geometry" />
+        </mxCell>
+        <mxCell id="plane_line" value="" style="line;strokeWidth=1;fillColor=none;strokeColor=#10b981;" vertex="1" parent="plane">
+          <mxGeometry y="30" width="170" height="8" as="geometry" />
+        </mxCell>
+        <mxCell id="plane_methods" value="+ deliver() : void" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=8;fontColor=#e2e8f0;fontFamily=Consolas;fontSize=12;" vertex="1" parent="plane">
+          <mxGeometry y="38" width="170" height="34" as="geometry" />
+        </mxCell>
+
+        <!-- RELATIONS -->
+        <mxCell id="rel_creates" value="creates / uses" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;dashed=1;endArrow=open;endFill=0;strokeColor=#94a3b8;fontColor=#cbd5e1;strokeWidth=2;" edge="1" parent="1" source="logistics" target="transport">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+
+        <mxCell id="ext1" value="extends" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;endFill=0;strokeColor=#60a5fa;fontColor=#94a3b8;" edge="1" parent="1" source="road_logistics" target="logistics">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="ext2" value="extends" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;endFill=0;strokeColor=#60a5fa;fontColor=#94a3b8;" edge="1" parent="1" source="sea_logistics" target="logistics">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="ext3" value="extends" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;endFill=0;strokeColor=#60a5fa;fontColor=#94a3b8;" edge="1" parent="1" source="air_logistics" target="logistics">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+
+        <mxCell id="imp1" value="implements" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;dashed=1;endArrow=block;endFill=0;strokeColor=#34d399;fontColor=#94a3b8;" edge="1" parent="1" source="truck" target="transport">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="imp2" value="implements" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;dashed=1;endArrow=block;endFill=0;strokeColor=#34d399;fontColor=#94a3b8;" edge="1" parent="1" source="ship" target="transport">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="imp3" value="implements" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;dashed=1;endArrow=block;endFill=0;strokeColor=#34d399;fontColor=#94a3b8;" edge="1" parent="1" source="plane" target="transport">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
+
